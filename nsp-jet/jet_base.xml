@@ -1,0 +1,54 @@
+
+<root>
+
+	<project name="nsp-platform" path="cn/newcapec/function/platform" classpath="cn.newcapec.function.platform">
+
+		<class name="LegelPerson" dbname="BASE_LEGAL_PERSON"
+			label="法人" desc="法人">
+			<import value="java.util.List"></import>
+			<import value="java.io.Serializable"></import>
+			<implement value="Serializable"></implement>
+			<property name="CustomerName" type="varchar" length="100" initial="null" testdata="阿牛" label="客户名称" desc="客户名称" index="1"
+				java-type="String"
+				unique="" required=""
+				default-value=""></property>
+			<property name="CustomerNameJP" type="varchar" length="100" initial="null" testdata="阿牛简拼" label="客户名称简拼" desc="客户名称简拼" index="2"
+				java-type="String"
+				unique="" required=""
+				default-value=""></property>
+		</class>
+
+		<class name="BizApp" dbname="BASE_BUSINESS_APP"
+			label="应用包" desc="应用包">
+			<import value="java.util.List"></import>
+			<import value="java.io.Serializable"></import>
+			<implement value="Serializable"></implement>
+			<property name="AppName" type="varchar" length="100" initial="null" testdata="城卡通" label="应用名称" desc="应用名称" index="1"
+				java-type="String"
+				unique="" required=""
+				default-value=""></property>
+			<property name="AppVer" type="varchar" length="100" initial="null" testdata="1.0" label="版本" desc="版本" index="2"
+				java-type="String"
+				unique="" required=""
+				default-value=""></property>
+		</class>
+
+
+
+
+
+	</project>
+
+
+
+
+
+	<!-- 分割线 -->
+
+
+
+
+
+
+
+</root>

@@ -1,0 +1,48 @@
+package <c:get select="$p/@classpath"/>.model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import cn.newcapec.framework.core.model.CommonModel;
+
+/**
+ * <p>
+ * Title: <c:get select="$c/@name"/>
+ * </p>
+ * <p>
+ * Description:
+ * </p>
+ * <p>
+ * Copyright: Copyright(c) 2011 郑州新开普电子股份有限公司
+ * </p>
+ *
+ * @author 黄鑫 (huangxin)
+ * @version
+ * @data 创建日期：2011-11-11 修改日期： 修改人： 复审人：
+ * @generated
+ */
+@Entity
+@Table(name = "<c:get select="$c/@dbname"/>")
+public class <c:get select="$c/@name"/> extends CommonModel {
+	private static final long serialVersionUID = 1L;
+
+<c:iterate select="$c/property" var="prop">
+	/* <c:get select="$prop/@label"/> */
+	private <c:get select="$prop/@java-type"/> <c:get select="lowercaseFirst($prop/@name)"/>;
+
+	@Column(name = "<c:get select="lowercaseFirst($prop/@name)"/>", length = <c:get select="$prop/@length"/>)
+	public <c:get select="$prop/@java-type"/> get<c:get select="$prop/@name"/>(){
+		return this.<c:get select="lowercaseFirst($prop/@name)"/>;
+	}
+
+	public void set<c:get select="$prop/@name"/>(<c:get select="$prop/@java-type"/> <c:get select="lowercaseFirst($prop/@name)"/>){
+		this.<c:get select="lowercaseFirst($prop/@name)"/> = <c:get select="lowercaseFirst($prop/@name)"/>;
+	}
+
+</c:iterate>
+}
