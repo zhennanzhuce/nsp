@@ -9,6 +9,7 @@
 			<implement value="Serializable"/>
 			<property name="CustomerName" type="varchar" length="100" initial="null" testdata="阿牛" label="客户名称" desc="客户名称" index="1" java-type="String" unique="" required="" default-value=""/>
 			<property name="CustomerNameJP" type="varchar" length="100" initial="null" testdata="阿牛简拼" label="客户名称简拼" desc="客户名称简拼" index="2" java-type="String" unique="" required="" default-value=""/>
+			<property name="OpDt" type="varchar" length="255" initial="null" testdata="" label="最后一次操作时间" desc="最后一次操作时间（每次操作都更新）" index="3" java-type="Date" unique="" required="" default-value=""/>
 		</class>
 
 		<class name="BizApp" dbname="BASE_BUSINESS_APP" label="应用包" desc="应用包">

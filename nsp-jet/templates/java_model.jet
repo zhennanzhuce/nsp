@@ -36,6 +36,11 @@ public class <c:get select="$c/@name"/> extends CommonModel {
 	private <c:get select="$prop/@java-type"/> <c:get select="lowercaseFirst($prop/@name)"/>;
 
 	@Column(name = "<c:get select="lowercaseFirst($prop/@name)"/>", length = <c:get select="$prop/@length"/>)
+	<c:choose select="$prop/@java-type">
+		<c:when test="'Date'">
+	@Temporal(TemporalType.TIMESTAMP)
+		</c:when>
+	</c:choose>
 	public <c:get select="$prop/@java-type"/> get<c:get select="$prop/@name"/>(){
 		return this.<c:get select="lowercaseFirst($prop/@name)"/>;
 	}
