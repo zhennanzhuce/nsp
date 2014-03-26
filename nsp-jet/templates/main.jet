@@ -35,7 +35,7 @@ such as ws:file, ws:folder and ws:project
 	<c:iterate select="//class" var="c">
 		<ws:file template="templates/java_model.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/model/{$c/@name}.java"/>
 
-		<ws:file template="templates/java_baseXXDao.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/dao/base/Base{$c/@name}Dao.java"/>
+		<ws:file template="templates/java_baseXXDao.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/dao/impl/Base{$c/@name}Dao.java"/>
 		<ws:file template="templates/java_XXDao.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/dao/{$c/@name}Dao.java"/>
 
 		<ws:file template="templates/java_bizXXImpl.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/biz/impl/{$c/@name}ServiceImpl.java"/>

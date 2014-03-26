@@ -1,5 +1,6 @@
 package <c:get select="$p/@classpath"/>.biz.impl;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,7 @@ import cn.newcapec.framework.core.utils.pagesUtils.Page;
 @Service("<c:get select="lowercaseFirst($c/@name)"/>Service")
 @Transactional
 @SuppressWarnings("all")
-public class <c:get select="$c/@name"/>ServiceImpl extends <c:get select="$c/@name"/>Service {
+public class <c:get select="$c/@name"/>ServiceImpl implements <c:get select="$c/@name"/>Service {
 
 	@Autowired
 	private <c:get select="$c/@name"/>Dao <c:get select="lowercaseFirst($c/@name)"/>Dao;
@@ -48,7 +49,7 @@ public class <c:get select="$c/@name"/>ServiceImpl extends <c:get select="$c/@na
 	}
 
 	@Override
-	public void saveOrUpdate(Department arg0) {
+	public void saveOrUpdate(<c:get select="$c/@name"/> arg0) {
 		// TODO Auto-generated method stub
 
 	}

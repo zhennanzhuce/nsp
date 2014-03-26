@@ -1,7 +1,9 @@
 package <c:get select="$p/@classpath"/>.biz;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
+import cn.newcapec.framework.core.biz.BaseService;
 import <c:get select="$p/@classpath"/>.biz.<c:get select="$c/@name"/>Service;
 import <c:get select="$p/@classpath"/>.model.<c:get select="$c/@name"/>;
 import cn.newcapec.framework.core.utils.pagesUtils.Page;

@@ -1,11 +1,13 @@
 package <c:get select="$p/@classpath"/>.dao;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import <c:get select="$p/@classpath"/>.dao.base.Base<c:get select="$c/@name"/>Dao;
+import <c:get select="$p/@classpath"/>.dao.impl.Base<c:get select="$c/@name"/>Dao;
 import cn.newcapec.framework.core.utils.pagesUtils.Page;
 
 /**
