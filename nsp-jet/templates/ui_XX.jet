@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>充值消费</title>
+</head>
+<body>
+
+<table class="standard_table th-bg standard_table_tt" style="border:1px solid blue">
+	<thead>
+		<tr>
+			<th class="th-1"><input title="全选/不选" type="checkbox"
+				class="check_box" ></th>
+			<th class="th-3">编号</th>
+			<th class="th-4">父编号</th>
+			<th class="th-5">部门名称</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		#foreach($!stu in $!pageView.records)
+		<tr>
+			<td class="td-1"><input type="checkbox" name="menuids"
+				value="$!stu.ID" class="check_box"></td>
+			<td class="td-3">$!stu.NO</td>
+			<td class="td-4">$!stu.PNO</td>
+			<td class="td-5">$!stu.DEPARTMENTNAME</td>
+		</tr>
+		#end
+	</tbody>
+</table>
+
+
+</body>
+</html>
