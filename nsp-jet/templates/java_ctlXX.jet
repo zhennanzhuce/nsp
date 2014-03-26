@@ -54,4 +54,16 @@ public class <c:get select="$c/@name"/>Controller extends MultiViewResource {
 
 	@Autowired
 	private <c:get select="$c/@name"/>Service <c:get select="lowercaseFirst($c/@name)"/>Service;
+
+
+	@RequestMapping(value = "payDealUI")
+	public ModelAndView <c:get select="lowercaseFirst($c/@name)"/>UI(ModelMap modelMap) {
+		PageContext.setPagesize(Integer.MAX_VALUE);
+		Page page = <c:get select="lowercaseFirst($c/@name)"/>Service.query(getJsonObject(), null);
+		// 菜单列表视图
+		PageView<Map<String, Object>> pageView = new PageView<Map<String, Object>>(PageContext.getPagesize(), PageContext.getOffset());
+		pageView.setQueryResult(page);
+		modelMap.put("pageView", pageView);
+		return toView(getUrl("<c:get select="lowercaseFirst($c/@name)"/>.<c:get select="lowercaseFirst($c/@name)"/>UI"), modelMap);
+	}
 }
