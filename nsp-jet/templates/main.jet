@@ -39,5 +39,6 @@ such as ws:file, ws:folder and ws:project
 		<ws:file template="templates/java_XXDao.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/dao/{$c/@name}Dao.java"/>
 
 		<ws:file template="templates/java_bizXXImpl.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/biz/impl/{$c/@name}ServiceImpl.java"/>
+		<ws:file template="templates/java_bizXX.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/biz/{$c/@name}Service.java"/>
 	</c:iterate>
 </c:iterate>
