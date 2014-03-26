@@ -34,5 +34,7 @@ such as ws:file, ws:folder and ws:project
 <c:iterate select="//project" var="p">
 	<c:iterate select="//class" var="c">
 		<ws:file template="templates/java_model.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/model/{$c/@name}.java"/>
+
+		<ws:file template="templates/java_baseXXDao.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/dao/base/Base{$c/@name}Dao.java"/>
 	</c:iterate>
 </c:iterate>
