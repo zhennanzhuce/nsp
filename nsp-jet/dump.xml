@@ -7,9 +7,23 @@
 			<import value="java.util.List"/>
 			<import value="java.io.Serializable"/>
 			<implement value="Serializable"/>
+			<property name="CustomerUnitCode" type="varchar" length="12" initial="null" testdata="阿牛" label="客户代码" desc="（国家地区编号（3）+预留（5）+分配序号（3）），如08600000001" index="1" java-type="String" unique="" required="" default-value=""/>
 			<property name="CustomerName" type="varchar" length="100" initial="null" testdata="阿牛" label="客户名称" desc="客户名称" index="1" java-type="String" unique="" required="" default-value=""/>
 			<property name="CustomerNameJP" type="varchar" length="100" initial="null" testdata="阿牛简拼" label="客户名称简拼" desc="客户名称简拼" index="2" java-type="String" unique="" required="" default-value=""/>
+			<property name="LinkMan" type="varchar" length="100" initial="null" testdata="" label="联系人" desc="联系人" index="3" java-type="String" unique="" required="" default-value=""/>
+			<property name="Telephone" type="varchar" length="13" initial="null" testdata="" label="联系电话" desc="联系电话" index="3" java-type="String" unique="" required="" default-value=""/>
+			<property name="Address" type="varchar" length="200" initial="null" testdata="" label="客户地址" desc="客户地址" index="3" java-type="String" unique="" required="" default-value=""/>
+			<property name="Email" type="varchar" length="200" initial="null" testdata="" label="邮箱" desc="邮箱" index="3" java-type="String" unique="" required="" default-value=""/>
+			<property name="BankCode" type="varchar" length="255" initial="null" testdata="" label="所属银行" desc="所属银行" index="3" java-type="Integer" unique="" required="" default-value=""/>
+			<property name="BankCodeNo" type="varchar" length="30" initial="null" testdata="" label="转账卡号" desc="银行卡号" index="3" java-type="String" unique="" required="" default-value=""/>
+			<property name="DataBaseStr" type="varchar" length="200" initial="null" testdata="" label="数据存储数据库连接字符串" desc="预留" index="3" java-type="String" unique="" required="" default-value=""/>
+			<property name="WebUrl" type="varchar" length="200" initial="null" testdata="" label="访问Web服务地址" desc="访问Web服务地址" index="3" java-type="String" unique="" required="" default-value=""/>
 			<property name="OpDt" type="varchar" length="255" initial="null" testdata="" label="最后一次操作时间" desc="最后一次操作时间（每次操作都更新）" index="3" java-type="Date" unique="" required="" default-value=""/>
+			<property name="OpenDt" type="varchar" length="255" initial="null" testdata="" label="最后一次操作时间" desc="最后一次操作时间（每次操作都更新）" index="3" java-type="Date" unique="" required="" default-value=""/>
+			<property name="Remark" type="varchar" length="255" initial="null" testdata="" label="备注信息" desc="备注信息" index="3" java-type="String" unique="" required="" default-value=""/>
+			<property name="Status" type="varchar" length="255" initial="null" testdata="" label="状态" desc="0：禁用状态 1：未授权 2：已授权" index="3" java-type="Integer" unique="" required="" default-value=""/>
+			<property name="IsDelete" type="varchar" length="255" initial="0" testdata="" label="逻辑删除字段" desc="0未删除，1 删除" index="3" java-type="Integer" unique="" required="" default-value=""/>
+			<property name="IsBalance" type="varchar" length="255" initial="0" testdata="" label="是否正在结帐" desc="0：否；1：是 2：准备结账 非0状态不允许执行日结操作" index="3" java-type="Integer" unique="" required="" default-value=""/>
 		</class>
 
 		<class name="BizApp" dbname="BASE_BUSINESS_APP" label="应用包" desc="应用包">
