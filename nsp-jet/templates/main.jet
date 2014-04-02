@@ -43,8 +43,9 @@ such as ws:file, ws:folder and ws:project
 
 		<ws:file template="templates/java_ctlXX.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/java/{$p/@path}/controller/{$c/@name}Controller.java"/>
 
-		<ws:file template="templates/prop_portalUrlMapping.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/resources/cn/newcapec/function/platform/controller-conf/platformUrlMapping.properties"/>
-
 		<ws:file template="templates/ui_XX.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/resources/views/pages/foundation/{lowercaseFirst($c/@name)}/pagelet/v1.0/indexUI.html"/>
 	</c:iterate>
+
+	<ws:file template="templates/prop_portalUrlMapping.jet" path="{$org.eclipse.jet.resource.project.name}/src/main/resources/cn/newcapec/function/{$p/@name}/controller-conf/{$p/@name}UrlMapping.properties"/>
 </c:iterate>
+

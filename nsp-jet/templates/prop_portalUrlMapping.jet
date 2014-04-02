@@ -1,1 +1,3 @@
-<c:get select="lowercaseFirst($c/@name)"/>.<c:get select="lowercaseFirst($c/@name)"/>UI=foundation/<c:get select="lowercaseFirst($c/@name)"/>/pagelet/v1.0/<c:get select="lowercaseFirst($c/@name)"/>UI
+<c:iterate select="//class" var="c">
+<c:get select="$p/@name"/>.<c:get select="lowercaseFirst($c/@name)"/>.indexUI=foundation/<c:get select="lowercaseFirst($c/@name)"/>/pagelet/v1.0/indexUI
+</c:iterate>

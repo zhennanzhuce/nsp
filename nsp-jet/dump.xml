@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
 
-	<project name="nsp-platform" path="cn/newcapec/function/platform" classpath="cn.newcapec.function.platform">
+	<project name="platform" path="cn/newcapec/function/platform" classpath="cn.newcapec.function.platform">
 
 		<class name="LegelPerson" dbname="BASE_LEGAL_PERSON" label="法人" desc="法人">
 			<import value="java.util.List"/>
