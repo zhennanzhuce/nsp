@@ -33,9 +33,10 @@ public class <c:get select="$c/@name"/>Dao extends Base<c:get select="$c/@name"/
 	public Page query(Map<String, Object> params, LinkedHashMap<String, String> orderby) {
 		List<Object> param = new ArrayList<Object>();
 
-		StringBuilder sql = new StringBuilder("select "+
-		"<c:iterate select="$c/property" var="prop" delimiter=", "><c:get select="$prop/@name"/></c:iterate>"+
-		" from <c:get select="$c/@dbname"/>");
+		StringBuilder sql = new StringBuilder();
+		sql.append("select ");
+		sql.append("<c:iterate select="$c/property" var="prop" delimiter=", "><c:get select="$prop/@name"/></c:iterate>");
+		sql.append(" from <c:get select="$c/@dbname"/>");
 
 		return this.sqlQueryForPage(sql.toString(), null, 0, 100, null);
 	}
