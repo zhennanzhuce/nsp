@@ -35,8 +35,8 @@ public class <c:get select="$c/@name"/>Dao extends Base<c:get select="$c/@name"/
 
 		StringBuilder sql = new StringBuilder();
 		sql.append("select ");
-		sql.append("<c:iterate select="$c/property" var="prop" delimiter=", "><c:get select="$prop/@name"/></c:iterate>");
-		sql.append(" from <c:get select="$c/@dbname"/>");
+		sql.append("<c:iterate select="$c/property" var="prop" delimiter=", ">a.<c:get select="$prop/@name"/></c:iterate>");
+		sql.append(" from <c:get select="$c/@dbname"/> a");
 
 		return this.sqlQueryForPage(sql.toString(), null, 0, 100, null);
 	}

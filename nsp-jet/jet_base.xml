@@ -40,7 +40,7 @@
 				java-type="Integer"
 				unique="" required=""
 				default-value=""></property>
-			<property name="BankCodeNo" type="varchar" length="30" initial="null" testdata="" label="转账卡号" desc="银行卡号" index="3"
+			<property name="BankCardNo" type="varchar" length="30" initial="null" testdata="" label="转账卡号" desc="银行卡号" index="3"
 				java-type="String"
 				unique="" required=""
 				default-value=""></property>

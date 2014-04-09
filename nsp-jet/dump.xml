@@ -15,7 +15,7 @@
 			<property name="Address" type="varchar" length="200" initial="null" testdata="" label="客户地址" desc="客户地址" index="3" java-type="String" unique="" required="" default-value=""/>
 			<property name="Email" type="varchar" length="200" initial="null" testdata="" label="邮箱" desc="邮箱" index="3" java-type="String" unique="" required="" default-value=""/>
 			<property name="BankCode" type="varchar" length="255" initial="null" testdata="" label="所属银行" desc="所属银行" index="3" java-type="Integer" unique="" required="" default-value=""/>
-			<property name="BankCodeNo" type="varchar" length="30" initial="null" testdata="" label="转账卡号" desc="银行卡号" index="3" java-type="String" unique="" required="" default-value=""/>
+			<property name="BankCardNo" type="varchar" length="30" initial="null" testdata="" label="转账卡号" desc="银行卡号" index="3" java-type="String" unique="" required="" default-value=""/>
 			<property name="DataBaseStr" type="varchar" length="200" initial="null" testdata="" label="数据存储数据库连接字符串" desc="预留" index="3" java-type="String" unique="" required="" default-value=""/>
 			<property name="WebUrl" type="varchar" length="200" initial="null" testdata="" label="访问Web服务地址" desc="访问Web服务地址" index="3" java-type="String" unique="" required="" default-value=""/>
 			<property name="OpDt" type="varchar" length="255" initial="null" testdata="" label="最后一次操作时间" desc="最后一次操作时间（每次操作都更新）" index="3" java-type="Date" unique="" required="" default-value=""/>
