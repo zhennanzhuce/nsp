@@ -93,6 +93,21 @@
 				default-value=""></property>
 		</class>
 
+		<class name="CodeBank" dbname="BASE_BANK"
+			label="银行" desc="银行">
+			<import value="java.util.List"></import>
+			<import value="java.io.Serializable"></import>
+			<implement value="Serializable"></implement>
+			<property name="BankName" type="varchar" length="200" initial="null" testdata="城卡通" label="银行名称" desc="银行名称" index="1"
+				java-type="String"
+				unique="" required=""
+				default-value=""></property>
+			<property name="Describe" type="varchar" length="200" initial="null" testdata="1.0" label="银行描述" desc="银行描述" index="2"
+				java-type="String"
+				unique="" required=""
+				default-value=""></property>
+		</class>
+
 
 
 

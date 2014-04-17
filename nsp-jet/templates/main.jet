@@ -24,11 +24,11 @@ such as ws:file, ws:folder and ws:project
 
    Note that model formatting may not be identical, and that in
    the case of non-XML input models, the dump may look quite different.
---%>
+
 
 <c:if test="isVariableDefined('org.eclipse.jet.resource.project.name')">
     <ws:file template="templates/dump.jet" path="{$org.eclipse.jet.resource.project.name}/dump.xml"/>
-</c:if>
+</c:if>--%>
 
 
 <c:iterate select="//project" var="p">
